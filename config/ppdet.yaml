@@ -1,0 +1,15 @@
+# 通用参数
+common:
+  device:               "CPU"           # 推理设备，CPU/GPU/XPU
+  use_mkldnn:           true            # 是否使用mkldnn库
+  cpu_num_threads:      6               # CPU预测时的线程数，在机器核数充足的情况下，该值越大，预测速度越快
+  gpu_id:               0               # GPU id
+  run_mode:             "paddle"        # 模型精度，paddle（无tensorrt下）或trt_fp32/trt_fp16/trt_int8（tensorrt）
+
+# 检测模型参数
+det:
+  model:            "../lib/picodet_xs_416/"           # 模型路径
+  trt_min_shape:    1                         # TRT模型最小DynamicShapeI
+  trt_max_shape:    1280                      # TRT模型最大DynamicShapeI
+  trt_opt_shape:    416                       # TRT模型输入大小
+  trt_calib_mode:   false                     # If the model is produced by TRT offline quantitative calibration,trt_calib_mode need to set True
