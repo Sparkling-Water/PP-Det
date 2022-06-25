@@ -11,7 +11,7 @@ data/
 reference/
 cmake-build-debug/
 pkg/
-lib/  
+lib/
 # !src/
 
 .vscode/
@@ -41,3 +41,4 @@ weights/
 *.log
 *.out
 *.o
+*.jpg
